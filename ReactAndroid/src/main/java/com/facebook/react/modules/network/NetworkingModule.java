@@ -122,6 +122,10 @@ public final class NetworkingModule extends ReactContextBaseJavaModule {
   private final List<ResponseHandler> mResponseHandlers = new ArrayList<>();
   private boolean mShuttingDown;
 
+  public void setClient(OkHttpClient client ) {
+    this.mClient = client;
+  }
+
   /* package */ NetworkingModule(
       ReactApplicationContext reactContext,
       @Nullable String defaultUserAgent,
